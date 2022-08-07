@@ -4,6 +4,7 @@ import com.tao.component.BeanLive;
 import com.tao.component.Cat;
 import com.tao.component.XmlComponent;
 import com.tao.component.Zoo;
+import com.tao.proxy.CalculatorPureImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -73,6 +74,15 @@ public class IOCTest {
         System.out.println(bean);
 
     }
+
+    @Test
+    public void testAop(){
+        CalculatorPureImpl bean = iocContainer.getBean(CalculatorPureImpl.class);
+        bean.add(1,2);
+
+    }
+
+
 
 
 
